@@ -10,7 +10,7 @@
 
 关于多项式的表示方法：使用矩阵表示多项式，形如下面的多项式
 
-![](http://latex.codecogs.com/gif.latex?\left[\begin{matrix}a_{n,n}&a_{n-1,n}&\cdots&a_{0,n}\\a_{n,n-1}&a_{n-1,n-1}&\cdots&a_{0,n-1}\\\vdots&\vdots&\ddots&\vdots\\a_{n,1}&a_{n-1,1}&\cdots&a_{0,1}\\a_{n,0}&a_{n-1,0}&\cdots&a_{0,0}\end{matrix}\right])
+![矩阵多项式形式](矩阵多项式形式.gif)
 
 其中最右下角的是 x 和 y 的幂都是 0 的项，也就是常数，往左一个是 x 高一次的项，往上一个是 y 高一次的项，这样其表达形式可以与 Matlab 自带的多项式的运算形式兼容。
 
