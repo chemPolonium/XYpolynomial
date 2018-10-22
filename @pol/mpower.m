@@ -1,5 +1,6 @@
 function a=mpower(u,v)
 % 多项式矩阵的幂
+% u是矩阵，v是幂
 if length(v)~=1 || isnumeric(v)==0
     error('error in times');
 end
