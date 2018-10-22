@@ -1,6 +1,8 @@
 classdef pol < handle
     % polynomial
     % by chemPolonium
+    % example: x^3*y^2 + x^2*y + 1
+    % is [1 0 0 0; 0 1 0 0; 0 0 0 1]
     properties
         p
     end
@@ -14,7 +16,3 @@ classdef pol < handle
         end
     end
 end
-
-% 不许删注释！为了安利个番写这么多代码我容易吗！
-% 如果你看到这里了就让我给你分享个番吧，《妄想学生会》
-% 又名《黄段子学生会》，一个很污很有趣的番
