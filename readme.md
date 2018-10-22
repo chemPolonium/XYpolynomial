@@ -9,17 +9,9 @@
 具体的使用方法在根目录下的 polytest.m 里。
 
 关于多项式的表示方法：使用矩阵表示多项式，形如下面的多项式
-$$
-\left[
-\begin{matrix}
- a_{n,n} & a_{n-1,n} & \cdots & a_{0,n} \\
- a_{n,n-1} & a_{n-1,n-1} & \cdots & a_{0,n-1} \\
- \vdots & \vdots & \ddots & \vdots \\
- a_{n,1} & a_{n-1,1} & \cdots & a_{0,1} \\
- a_{n,0} & a_{n-1,0} & \cdots & a_{0,0}
-\end{matrix}
-\right]
-$$
+
+![](http://latex.codecogs.com/gif.latex?\left[\begin{matrix}a_{n,n}&a_{n-1,n}&\cdots&a_{0,n}\\a_{n,n-1}&a_{n-1,n-1}&\cdots&a_{0,n-1}\\\vdots&\vdots&\ddots&\vdots\\a_{n,1}&a_{n-1,1}&\cdots&a_{0,1}\\a_{n,0}&a_{n-1,0}&\cdots&a_{0,0}\end{matrix}\right])
+
 其中最右下角的是 x 和 y 的幂都是 0 的项，也就是常数，往左一个是 x 高一次的项，往上一个是 y 高一次的项，这样其表达形式可以与 Matlab 自带的多项式的运算形式兼容。
 
 可以构建多项式矩阵，多项式矩阵之间可以相加或相乘，也可以用一个数或一个多项式和这个矩阵相加或相乘（效果是这个数或多项式乘矩阵里面每一项）。方阵可以进行幂运算，如果需要方阵内每一项的幂则使用 .\^ 符号。
