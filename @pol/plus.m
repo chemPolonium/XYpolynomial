@@ -3,11 +3,11 @@ function a=plus(u,v)
 % 对Matlab原来的加法进行了运算符重载
 % by chemPolonium
 if all(size(u)==size(v))
-    a=apfun(@singleplus,u,v);
+    a=arrayfun(@singleplus,u,v);
 elseif length(u)==1
-    a=apfunsi(@singleplus,u,v);
+    a=arrayfun(@(x)singleplus(u,x),v);
 elseif length(v)==1
-    a=apfunsi(@singleplus,v,u);
+    a=arrayfun(@(x)singleplus(v,x),u);
 else
     error('dimension not agree');
 end

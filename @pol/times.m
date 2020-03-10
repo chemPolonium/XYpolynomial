@@ -2,12 +2,14 @@ function a=times(u,v)
 % a function to multiply the 2-D polynomials
 % by chemPolonium
 % 重载了 Matlab 的点乘号
-if length(u) == length(v)
-    a=apfun(@singletimes,u,v);
+if all(size(u) == size(v))
+    a=arrayfun(@singletimes,u,v);
 elseif length(u) == 1
-    a=apfunsi(@singletimes,u,v);
+    a=arrayfun(@(x)singletimes(u,x),v);
 elseif length(v) == 1
-    a=apfunsi(@singletimes,v,u);
+    a=arrayfun(@(x)singletimes(v,x),u);
+else
+    error('dimension not agree');
 end
 end
 
