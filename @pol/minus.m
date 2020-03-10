@@ -2,11 +2,11 @@ function a=minus(u,v)
 % ºı∑®£¨≤ªΩ‚ Õ
 % by chemPolonium
 if all(size(u)==size(v))
-    a=apfun(@singleminus,u,v);
+    a=arrayfun(@singleminus,u,v);
 elseif length(u)==1
-    a=apfunsi(@singleminus,u,v);
+    a=arrayfun(@(x)singleminus(u,x),v);
 elseif length(v)==1
-    a=apfunsi(@singleminus,u,v);
+    a=arrayfun(@(x)singleminus(x,v),u);
 else
     error('dimension not agree');
 end

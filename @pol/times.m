@@ -1,7 +1,7 @@
 function a=times(u,v)
 % a function to multiply the 2-D polynomials
-% by chemPolonium
 % 重载了 Matlab 的点乘号
+% by chemPolonium
 if all(size(u) == size(v))
     a=arrayfun(@singletimes,u,v);
 elseif length(u) == 1
